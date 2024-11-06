@@ -1,0 +1,49 @@
+services:
+
+  db:
+    image: postgres:17
+    container_name: postgres_db
+    environment:
+      POSTGRES_DB: ${DB_NAME_DEV}
+      POSTGRES_USER: ${DB_USER_DEV}
+      POSTGRES_PASSWORD: ${DB_PASSWORD_DEV}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - .env 
+
+  backend:
+    build:
+      context: ./backdaaily
+      dockerfile: Dockerfile
+    container_name: backdaaily
+    command: >
+      bash -c "python manage.py migrate &&
+             python manage.py collectstatic --noinput &&
+             python manage.py runserver 0.0.0.0:8000"    
+    volumes:
+      - ./staticfiles:/app/staticfiles
+      - ./backdaaily:/usr/src/app
+    depends_on:
+      - db
+    env_file:
+      - .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=backdaaily.settings.dev
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    container_name: front
+    volumes:
+      - ./front:/app
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+
+volumes:
+  postgres_data:
