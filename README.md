@@ -31,7 +31,7 @@ git clone https://github.com/pauleatonc/daailytest.git cd daailytest
 
 2. **Set Up Environment Variables**
 
-**To facilitate reviewing of the exercise the .env file is in the repository. So it is nos necesary to creat it again**
+**To facilitate reviewing the exercise the .env file is in the repository. So it is not necesary to creat it again**
 
 These variables configure the connection to the PostgreSQL database used by the backend.
 
