@@ -59,8 +59,8 @@ The Django backend is located in the `backdaaily` folder and is configured to co
 
 **Migrations are automated in the docker compose**
 
-### Create Super User
-
+### Create Super User if is necesary
+(Shouldn´t be necesary, how ever, it is allways an option.)
 To create a superuser on the backend, execute:
 
 sudo docker compose exec -it backend bash 
