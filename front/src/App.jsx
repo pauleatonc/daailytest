@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { DarkModeProvider, useDarkMode } from './context/DarkModeContext';
 import Home from './views/Home';
 
 function AppContainer() {
   const { isDarkMode } = useDarkMode();
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add('darkmode');
+    } else {
+      document.body.classList.remove('darkmode');
+    }
+  }, [isDarkMode]);
+
   return (
-    <div style={{ backgroundColor: isDarkMode ? '#2e2e2e' : '#ffffff', minHeight: '100vh' }}>
+    <div>
       <Home />
     </div>
   );
