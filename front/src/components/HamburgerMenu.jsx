@@ -1,25 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import '../assets/styles/ownstyles.css';
+import HamburgerModal from './HamburgerModal';
+
 
 const HamburgerMenu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+
   return (
-    <div className="jv-hamburger-menu__container">
-      <div className="jv-hamburger-menu__button" data-insights-category="jv-header" data-insights-label="hamburger-btn" data-insights-value="open">
+    <>
+      <div className={`jv-hamburger-menu__button ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <span></span>
       </div>
-      {/* Hamburger Menu */}
-      <nav className="jv-hamburger-menu__categories-container">
-        <ul className="jv-hamburger-menu__categories">
-          <li>
-            <a className="jv-hamburger-menu__category" href="https://www.archdaily.com/articles">Articles</a>
-          </li>
-          <li>
-            <a className="jv-hamburger-menu__category" href="https://www.archdaily.com/architecture-news">News</a>
-          </li>
-          {/* Content*/}
-        </ul>
-      </nav>
-    </div>
+      <HamburgerModal isOpen={isOpen} onClose={toggleMenu}/>      
+    </>
   );
 };
+
 
 export default HamburgerMenu;

@@ -3,7 +3,6 @@ import Logo from './Logo';
 import NavigationMenu from './NavigationMenu';
 import SearchForm from './SearchForm';
 import DarkModeButton from './DarkModeButton';
-import Login from './Login';
 import HamburgerMenu from './HamburgerMenu';
 import SiteSelector from './SiteSelector';
 
@@ -26,10 +25,12 @@ const Navbar = () => {
             <span className="afd-site-name__slogan afd-desktop-e">The world's most visited architecture platform</span>
           </h1>
         </div>
+      
+        <div className="jv-header__right"> 
         <div className="jv-header__right">
           <DarkModeButton />
-        </div>
-        <div className="jv-header__right"> 
+        </div>  
+        <span className="jv-header__separator"></span>
           <HamburgerMenu />
         </div>
       </div>

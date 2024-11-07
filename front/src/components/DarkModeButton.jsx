@@ -7,9 +7,9 @@ const DarkModeButton = () => {
 
   return (
     <div className="afd-site-selector__country-name">
-      <button className="afd-site-selector__country-name" onClick={toggleDarkMode}>
+      <div className="afd-site-selector__country-name" onClick={toggleDarkMode} style={{ cursor: 'pointer' }}>
         {isDarkMode ? 'Light Mode' : 'Dark Mode'}
-      </button>
+      </div>
     </div>
 
   );
