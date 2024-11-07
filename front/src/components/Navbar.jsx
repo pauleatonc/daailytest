@@ -29,12 +29,7 @@ const Navbar = () => {
         <div className="jv-header__right">
           <DarkModeButton />
         </div>
-        <div className="jv-header__right">
-          <div className="jv-header__right">
-            <span className="jv-header__separator"></span>
-            <Login />
-          </div>
-          
+        <div className="jv-header__right"> 
           <HamburgerMenu />
         </div>
       </div>

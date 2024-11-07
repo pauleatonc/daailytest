@@ -6,9 +6,12 @@ const DarkModeButton = () => {
   const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext);
 
   return (
-    <button className="dark-mode-button" onClick={toggleDarkMode}>
-      {isDarkMode ? 'Light Mode' : 'Dark Mode'}
-    </button>
+    <div className="afd-site-selector__country-name">
+      <button className="afd-site-selector__country-name" onClick={toggleDarkMode}>
+        {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+      </button>
+    </div>
+
   );
 };
 

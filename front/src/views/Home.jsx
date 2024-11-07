@@ -11,13 +11,9 @@ const Home = () => {
       <Navbar />
       <main className="afd-container-main--margin-bottom nrd-mobile--margin-top">
         <div id="feat_box" className="afd-container-main afd-desktop-e clearfix">
-
-          <Carousel />
-
-          
+          <Carousel />          
           <EditorChoice />
-        </div>
-        
+        </div>        
       </main>
     </div>
   );

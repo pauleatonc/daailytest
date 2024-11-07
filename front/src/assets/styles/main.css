@@ -7663,9 +7663,9 @@
             }
 
             .jv-header__main-search-icon {
-                width: 20px;
-                height: 20px;
-                margin: 0 16px;
+                width: 28px;
+                height: 28px;
+                margin: 0 10px;
                 color: var(--input-placeholder)
             }
 
@@ -14479,7 +14479,7 @@
             
 
 
-            
+
 
             ﻿.clearfix,.minis,.post_gallery {
                 *zoom:1}
@@ -20241,4 +20241,14 @@
                 grid-area: title;
                 height: 28px;
                 margin-bottom: 32px
+            }
+
+            .dark-mode {
+              background-color: #121212;
+              color: #ffffff;
+            }
+            
+            .light-mode {
+              background-color: #ffffff;
+              color: #000000;
             }
