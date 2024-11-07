@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../assets/styles/ownstyles.css';
 
 const SiteSelector = () => (
     <div className="afd-site-selector afd-desktop-e">

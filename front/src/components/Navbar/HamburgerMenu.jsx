@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../assets/styles/ownstyles.css';
+import '../../assets/styles/ownstyles.css';
 import HamburgerModal from './HamburgerModal';
 
 

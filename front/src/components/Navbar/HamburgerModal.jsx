@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styles/ownstyles.css';
+import '../../assets/styles/ownstyles.css';
 
 const HamburgerModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;

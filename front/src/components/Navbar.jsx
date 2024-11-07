@@ -1,10 +1,10 @@
 import React from 'react';
-import Logo from './Logo';
+import Logo from './Navbar/Logo';
 import NavigationMenu from './NavigationMenu';
 import SearchForm from './SearchForm';
-import DarkModeButton from './DarkModeButton';
-import HamburgerMenu from './HamburgerMenu';
-import SiteSelector from './SiteSelector';
+import DarkModeButton from './Navbar/DarkModeButton';
+import HamburgerMenu from './Navbar/HamburgerMenu';
+import SiteSelector from './Navbar/SiteSelector';
 
 const Navbar = () => {
   return (
