@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Logo = () => (
-  <a className="afd-site-name__logo-container" href="https://www.archdaily.com" rel="home" title="ArchDaily">
+  <a className="afd-site-name__logo-container" href="https://www.archdaily.com" rel="home" title="ArchDaily" sstyle={{ marginTop: '70px' }}>
     <picture>
       <source
         className="dark-alt afd-site-name__logo"
@@ -16,6 +16,7 @@ const Logo = () => (
         src="https://assets.adsttc.com/doodles/flat/logo-blue-full.svg"
         style={{ width: '145px', height: '75px' }}
         width="145"
+        padding="16px"
       />
     </picture>
   </a>

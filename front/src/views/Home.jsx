@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Header';
+import Navbar from '../components/Navbar';
 import Carousel from '../components/Carousel';
 import EditorChoice from '../components/EditorChoice';
 import '../assets/styles/main.css';
@@ -8,10 +8,16 @@ import '../assets/styles/main.css';
 const Home = () => {
   return (
     <div>
-      <Header />
-      <main>
-        <Carousel />
-        <EditorChoice />
+      <Navbar />
+      <main className="afd-container-main--margin-bottom nrd-mobile--margin-top">
+        <div id="feat_box" className="afd-container-main afd-desktop-e clearfix">
+
+          <Carousel />
+
+          
+          <EditorChoice />
+        </div>
+        
       </main>
     </div>
   );
