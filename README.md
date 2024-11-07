@@ -31,12 +31,6 @@ git clone https://github.com/pauleatonc/daailytest.git cd daailytest
 
 2. **Set Up Environment Variables**
 
-Create an `.env` file in the project root and add the following variables:
-
-DB_NAME_DEV=database_name 
-DB_USER_DEV=database_user 
-DB_PASSWORD_DEV=database_password
-
 **To facilitate reviewing of the exercise the .env file is in the repository. So it is nos necesary to creat it again**
 
 These variables configure the connection to the PostgreSQL database used by the backend.
@@ -56,7 +50,6 @@ This command will:
 
 - **Frontend**: [http://localhost:5173](http://localhost:5173)
 - **Backend**: [http://localhost:8000](http://localhost:8000)
-- **Backend Admin**: [http://localhost:8000](http://localhost:8000/admin)
 
 ## Backend Structure (Django)
 
@@ -64,14 +57,11 @@ The Django backend is located in the `backdaaily` folder and is configured to co
 
 ### Database Migrations
 
-To run migrations on the backend, execute:
-
-sudo docker compose exec backend python manage.py migrate
 **Migrations are automated in the docker compose**
 
 ### Create Super User
 
-To run migrations on the backend, execute:
+To create a superuser on the backend, execute:
 
 sudo docker compose exec -it backend bash 
 python manage.py createsuperuser
