@@ -19,6 +19,9 @@ class HeroSerializer(serializers.Serializer):
     editor_choice = EditorChoiceSerializer()
     banner = BannerSerializer()
 
+class MainMenuSerializer(serializers.Serializer):
+    main_menu= serializers.CharField()
+
 class HomePageDataSerializer(serializers.Serializer):
     main_menu = serializers.ListField(child=serializers.CharField())
     hero = HeroSerializer()
