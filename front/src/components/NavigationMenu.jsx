@@ -1,5 +1,4 @@
 import React from 'react';
-import '../assets/style/main.css';
 
 const NavigationMenu = () => (
   <nav className="jv-header__main-nav">

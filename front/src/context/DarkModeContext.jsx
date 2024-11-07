@@ -14,12 +14,12 @@ export const DarkModeProvider = ({ children }) => {
 
   return (
     <DarkModeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
-      <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
-        {children}
-      </div>
+      {children}
     </DarkModeContext.Provider>
   );
 };
+
+export { DarkModeContext };
 
 // Context Hook 
 export const useDarkMode = () => {

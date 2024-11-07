@@ -1,5 +1,4 @@
 import React from 'react';
-import '../assets/style/main.css';
 
 const Logo = () => (
   <a className="afd-site-name__logo-container" href="https://www.archdaily.com" rel="home" title="ArchDaily">
